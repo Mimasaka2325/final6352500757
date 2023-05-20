@@ -1,0 +1,11 @@
+1. ROS Master 
+   ทำหน้าที่เป็น server สำหรับให้ node หลายๆตัวเชื่อมต่อกัน และสามารถส่ง message หากันได้ คำสั่งที่ใช้รัน master คือ roscore ที่เราใช้ก่อนหน้านี้นี่เอง เมื่อเรารัน master แล้ว เราก็สามารถที่จะสร้าง node ต่างๆขึ้นมาเพื่อดึงข้อมูลได้ การเชื่อมกันระหว่าง node จะส่งข้อความหากันผ่าน topic
+2.ROS Topics และ ROS Service 
+   - topic ก็เหมือนกับหัวเรื่องที่เราไว้คุยกัน พูดง่ายๆคือ publisher node จะ publish message ของตัวเองขึ้นไปที่ topic แล้วจะมี subscriber node มารอรับ message ที่ส่งมาทาง topic ที่มีชื่อเดียวกัน
+   - service เป็น synchronous โดยจะมี service client กับ service server การทำงานก็คือ node ที่เป็น service client จะส่งไปหา node service server แล้ว node server ก็จะตอบคำตอบกลับไปที่ node client
+3. อธิบายความแตกต่างของ Topic กับ message
+   - topic เหมือนกับหัวเรื่องที่เราไว้คุยกัน พูดง่ายๆคือ publisher node จะ publish message ของตัวเองขึ้นไปที่ topic แล้วจะมี subscriber node มารอรับ message ที่ส่งมาทาง topic ที่มีชื่อเดียวกัน
+   - message node แต่ละตัวจะคุยกันผ่าน message, โดย message ก็อาจจะเป็นชนิดของตัวแปร เช่น integer, floating point, boolean หรืออาจจะเอามาประกอบกันเป็น structure เช่นประกอบเป็น array หรือประกอบรวม int, float, string เข้าด้วยกันก็ได้
+4. อธิบายความแตกต่างในเชิงการใช้งานของ ROS Topic กับ ROS Service
+   topic จะสามารถคุยกันได้โดยผ่านแค่ topic ที่มีชื่อเดียวกัน แต่ Service จะสื่อสารกันโดย service client จะส่งไปหา node service server แล้ว node server ก็จะตอบคำตอบกลับไปที่ node client
+     

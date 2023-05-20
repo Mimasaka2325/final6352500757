@@ -1,0 +1,5 @@
+mkdir Mimasaka
+cd Mimasaka
+cat > CLASS_ROBOT.txt
+git remote add origin "https://github.com/class-robot/final-exam.git"
+git remote -v
